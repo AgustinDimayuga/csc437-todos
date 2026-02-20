@@ -20,6 +20,7 @@ function App() {
     const newTask = { id: nanoid(), name: string, isComplete: false };
     const taskListClone = [...taskList, newTask];
     setTaskList(taskListClone);
+    setModal(false)
   }
   function toggleTaskCompleted(id) {
     const updatedTasks = taskList.map((task) => {

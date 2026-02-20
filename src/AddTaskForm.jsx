@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function AddTaskForm({onNewTask }) {
+function AddTaskForm({ onNewTask }) {
   const [inputValue, setInputValue] = useState("");
   function handleChange(e) {
     setInputValue(e.target.value);
@@ -8,7 +8,7 @@ function AddTaskForm({onNewTask }) {
 
   function handleButtonClicked() {
     onNewTask(inputValue);
-    setInputValue("")
+    setInputValue("");
   }
 
   return (
