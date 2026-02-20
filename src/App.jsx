@@ -20,7 +20,7 @@ function App() {
     const newTask = { id: nanoid(), name: string, isComplete: false };
     const taskListClone = [...taskList, newTask];
     setTaskList(taskListClone);
-    setModal(false)
+    setModal(false);
   }
   function toggleTaskCompleted(id) {
     const updatedTasks = taskList.map((task) => {
@@ -43,7 +43,10 @@ function App() {
       {" "}
       {/* Reminder: React code uses className instead of class */}
       <div className="flex flex-col items-start gap-4">
-        <button onClick={() => setModal(true)}className="border-2 rounded-xl p-1.5 bg-blue-600 hover:bg-blue-800 active:bg-blue-950 text-white">
+        <button
+          onClick={() => setModal(true)}
+          className="border-2 rounded-xl p-1.5 bg-blue-600 hover:bg-blue-800 active:bg-blue-950 text-white"
+        >
           New Task
         </button>
         <Modal
